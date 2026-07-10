@@ -15,7 +15,7 @@ export function Logo({ className = '', light = false }: LogoProps) {
           <img
             src={logoImg}
             alt="Dekain Pay"
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           />
         </div>
       </div>
@@ -27,7 +27,7 @@ export function Logo({ className = '', light = false }: LogoProps) {
       <img
         src={logoImg}
         alt="Dekain Pay"
-        className="h-9 w-auto"
+        className="h-20 w-auto"
       />
     </div>
   );
