@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, ShieldCheck, MapPin } from 'lucide-react';
+import { Zap, ShieldCheck, MapPin, Fingerprint, Home, Receipt } from 'lucide-react';
 
 const features = [
   {
@@ -17,6 +17,21 @@ const features = [
     icon: <MapPin className="text-secondary" size={32} />,
     title: "Nationwide Coverage",
     description: "Transfer funds to any valid bank account across India with full NEFT and IMPS support."
+  },
+  {
+    icon: <Fingerprint className="text-secondary" size={32} />,
+    title: "AEPS",
+    description: "Aadhaar Enabled Payment System lets customers withdraw cash, check balances, and transfer funds using just their Aadhaar number and fingerprint — no card or PIN needed."
+  },
+  {
+    icon: <Home className="text-secondary" size={32} />,
+    title: "Rent / Payment Vendor",
+    description: "Enable customers to pay house rent and vendor dues directly from your retail outlet — fast, paperless, and fully trackable digital payments."
+  },
+  {
+    icon: <Receipt className="text-secondary" size={32} />,
+    title: "BBPS",
+    description: "Bharat Bill Payment System support lets retailers collect utility bills, mobile recharges, insurance premiums, and more through a single, RBI-regulated platform."
   }
 ];
 
