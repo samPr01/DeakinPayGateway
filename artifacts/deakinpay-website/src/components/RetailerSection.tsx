@@ -5,12 +5,12 @@ import { Users, IndianRupee, Building } from 'lucide-react';
 const stats = [
   {
     icon: <Users size={32} className="text-secondary" />,
-    value: "10,000+",
+    value: "2,500+",
     label: "Retailer Partners"
   },
   {
     icon: <IndianRupee size={32} className="text-secondary" />,
-    value: "₹500Cr+",
+    value: "₹25Cr+",
     label: "Transferred Monthly"
   },
   {

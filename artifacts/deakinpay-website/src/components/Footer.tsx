@@ -27,16 +27,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-white font-bold mb-6 text-lg">Legal</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">Refund Policy</a></li>
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h4 className="text-white font-bold mb-6 text-lg">Contact Us</h4>
