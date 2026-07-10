@@ -1,27 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserPlus, ClipboardList, IndianRupee, CheckCircle } from 'lucide-react';
+import { Target, Search, Briefcase, RefreshCw } from 'lucide-react';
 
 const steps = [
   {
-    icon: <UserPlus size={28} strokeWidth={1.5} />,
-    title: "Register as Retailer",
-    description: "Sign up on the DekainPay platform with your basic business details and complete KYC verification."
+    icon: <Target size={28} strokeWidth={1.5} />,
+    title: "Strategic Planning",
+    description: "Plan your retail growth by mapping which DekainPay services — DMT, AEPS, BBPS — best fit your customer base and maximise your outlet's earning potential."
   },
   {
-    icon: <ClipboardList size={28} strokeWidth={1.5} />,
-    title: "Add Beneficiary Details",
-    description: "Enter the customer's mobile number and the recipient's bank account information securely."
+    icon: <Search size={28} strokeWidth={1.5} />,
+    title: "Market Research",
+    description: "Identify underserved customers in your locality who rely on domestic money transfers and digital bill payments, and position your outlet as their go-to financial hub."
   },
   {
-    icon: <IndianRupee size={28} strokeWidth={1.5} />,
-    title: "Enter Transfer Amount",
-    description: "Input the amount to transfer, review the transaction summary, and confirm with your customer."
+    icon: <Briefcase size={28} strokeWidth={1.5} />,
+    title: "Financial Advisory",
+    description: "Leverage DekainPay's transparent commission structure to advise customers on the fastest and most cost-effective way to send money to any bank account across India."
   },
   {
-    icon: <CheckCircle size={28} strokeWidth={1.5} />,
-    title: "Instant IMPS Transfer",
-    description: "Execute the secure NEFT/IMPS transfer instantly — funds reach the beneficiary in real time, 24/7."
+    icon: <RefreshCw size={28} strokeWidth={1.5} />,
+    title: "Change Management",
+    description: "Seamlessly transition your retail outlet into a full-service digital payment point with DekainPay's guided onboarding, training, and round-the-clock partner support."
   }
 ];
 
