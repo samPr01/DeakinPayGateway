@@ -61,7 +61,7 @@ export function RetailerSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm sm:col-span-2 text-center"
               >
-                <div className="w-14 h-14 rounded-xl bg-white/10 flex mb-6 flex-row justify-center items-center ml-[310px]">
+                <div className="w-14 h-14 rounded-xl bg-white/10 flex mb-6 flex-row justify-center items-center ml-[230px]">
                   {stat.icon}
                 </div>
                 <h4 className="text-4xl font-bold mb-2 text-center">{stat.value}</h4>
