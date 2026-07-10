@@ -1,36 +1,37 @@
-# [Project name]
+# DeakinPay
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A polished, responsive marketing website for DeakinPay — an Indian domestic money transfer (DMT) platform that helps retailers offer NEFT and IMPS transfer services from their outlets.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/deakinpay-website run dev` — run the frontend (workflow: `artifacts/deakinpay-website: web`)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend: React + Vite, Tailwind CSS v4, Framer Motion, Lucide React
+- Typography: Plus Jakarta Sans (Google Fonts)
+- No backend required — static marketing site
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/deakinpay-website/src/` — all frontend source
+- `artifacts/deakinpay-website/src/components/` — reusable section components (Logo, Navbar, Hero, DMT, Retailer, HowItWorks, WhyChoose, CTA, Footer)
+- `artifacts/deakinpay-website/src/index.css` — brand palette (navy `#0A2240`, green `#16A34A`) and CSS variables
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Single-page scrolling layout — no routing; all sections rendered in one App component
+- Brand palette defined as CSS variables (`--color-primary`, `--color-secondary`) in `index.css`
+- All CTA/partner buttons use `mailto:support@deakinpay.in` as the conversion path (placeholder)
+- Framer Motion for all scroll-triggered entrance animations and hover effects
+- Content strictly limited to domestic payment/money transfer — no iGaming, forex, crypto
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Marketing website with 7 sections: Hero, DMT Service (feature cards), Retailer Network (stats), How It Works (4-step flow), Why Choose DeakinPay (5 benefit cards), CTA, and Footer.
 
 ## User preferences
 
@@ -38,7 +39,8 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- All forms are placeholder only — no real payment processing
+- "Partner With Us" and "Become a Partner" buttons use `mailto:` — wire to a real form when a contact/lead-capture flow is added
 
 ## Pointers
 
