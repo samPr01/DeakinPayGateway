@@ -43,11 +43,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-secondary shrink-0 mt-1" size={20} />
-                <span>12, Commerce House, MG Road, Pune, Maharashtra 411001</span>
+                <span>213, Diamond Trading Centre, New Palasia, Indore 452001 (MP) India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-secondary shrink-0" size={20} />
-                <span>+91 98765 43210</span>
+                <span>+91 74007 86767</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-secondary shrink-0" size={20} />

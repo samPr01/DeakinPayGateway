@@ -7,7 +7,7 @@ const contactCards = [
   {
     icon: <MapPin size={24} />,
     title: 'Address',
-    detail: '12, Commerce House, MG Road, Pune, Maharashtra 411001, India'
+    detail: '213, Diamond Trading Centre, New Palasia, Indore 452001 (MP) India'
   },
   {
     icon: <Mail size={24} />,
@@ -17,7 +17,7 @@ const contactCards = [
   {
     icon: <Phone size={24} />,
     title: 'Telephone',
-    detail: '+91 98765 43210'
+    detail: '+91 74007 86767'
   }
 ];
 
@@ -123,7 +123,7 @@ export function PartnerPage() {
                       value={form.phone}
                       onChange={handleChange}
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 74007 86767"
                       className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary transition"
                     />
                   </div>
