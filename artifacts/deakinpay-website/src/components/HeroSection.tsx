@@ -12,7 +12,6 @@ export function HeroSection() {
           backgroundSize: '40px 40px'
         }}></div>
       </div>
-
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-8 items-center">
           
@@ -32,9 +31,7 @@ export function HeroSection() {
               Fast, Secure Money Transfers for <span className="text-secondary">Every Customer</span>
             </h1>
             
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-              DekainPay helps retailers provide reliable domestic money transfer services directly from their outlets. Send money to bank accounts across India through secure NEFT and IMPS transfers.
-            </p>
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">DekainPay helps retailers provide reliable domestic money transfer services directly. Send money to bank accounts across India through secure NEFT and IMPS transfers.</p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-secondary text-white font-semibold rounded-xl hover:bg-secondary/90 transition-all hover:-translate-y-1 shadow-lg shadow-green-600/20">
