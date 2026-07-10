@@ -1,125 +1,140 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserPlus, UserCheck, IndianRupee, CheckCircle } from 'lucide-react';
+import { UserPlus, ClipboardList, IndianRupee, CheckCircle } from 'lucide-react';
 
 const steps = [
   {
-    icon: <UserPlus size={24} />,
-    title: "Register",
-    description: "Sign up as a DekainPay retailer with basic KYC details."
+    icon: <UserPlus size={28} strokeWidth={1.5} />,
+    title: "Register as Retailer",
+    description: "Sign up on the DekainPay platform with your basic business details and complete KYC verification."
   },
   {
-    icon: <UserCheck size={24} />,
-    title: "Add Details",
-    description: "Enter sender mobile number and beneficiary account details."
+    icon: <ClipboardList size={28} strokeWidth={1.5} />,
+    title: "Add Beneficiary Details",
+    description: "Enter the customer's mobile number and the recipient's bank account information securely."
   },
   {
-    icon: <IndianRupee size={24} />,
-    title: "Enter Amount",
-    description: "Input the amount to transfer and verify with the customer."
+    icon: <IndianRupee size={28} strokeWidth={1.5} />,
+    title: "Enter Transfer Amount",
+    description: "Input the amount to transfer, review the transaction summary, and confirm with your customer."
   },
   {
-    icon: <CheckCircle size={24} />,
-    title: "Complete",
-    description: "Execute secure NEFT/IMPS transfer instantly."
+    icon: <CheckCircle size={28} strokeWidth={1.5} />,
+    title: "Instant IMPS Transfer",
+    description: "Execute the secure NEFT/IMPS transfer instantly — funds reach the beneficiary in real time, 24/7."
   }
 ];
 
+// Dashed arrow SVG between steps
+function DashedArrow() {
+  return (
+    <div className="flex items-center justify-center w-16 shrink-0 mt-10">
+      <svg width="56" height="14" viewBox="0 0 56 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="7" x2="42" y2="7" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
+        <path d="M40 3L50 7L40 11" stroke="#CBD5E1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      </svg>
+    </div>
+  );
+}
+
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+    <section id="how-it-works" className="py-24 bg-white">
+      <div className="container mx-auto px-6 max-w-6xl">
+
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold text-primary mb-6"
+            transition={{ duration: 0.4 }}
+            className="text-xs font-bold tracking-[0.25em] uppercase text-secondary mb-4"
           >
-            How It <span className="text-secondary">Works</span>
-          </motion.h2>
-          <motion.p 
+            Work Process
+          </motion.p>
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-slate-600"
+            className="text-3xl md:text-4xl font-bold text-primary leading-snug"
           >
-            A simple, intuitive four-step process to complete money transfers securely.
-          </motion.p>
+            Where your financial dreams<br className="hidden sm:block" /> become reality
+          </motion.h2>
         </div>
 
-        {/* Desktop Stepper */}
-        <div className="hidden lg:block relative max-w-5xl mx-auto">
-          {/* Connecting Line */}
-          <div className="absolute top-10 left-[12%] right-[12%] h-1 bg-slate-200">
-            <motion.div 
-              initial={{ width: 0 }}
-              whileInView={{ width: '100%' }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="h-full bg-secondary"
-            />
-          </div>
-
-          <div className="grid grid-cols-4 gap-8 relative z-10">
-            {steps.map((step, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+        {/* Desktop — horizontal stepper with dashed arrows */}
+        <div className="hidden lg:flex items-start justify-between">
+          {steps.map((step, index) => (
+            <React.Fragment key={index}>
+              {/* Step card */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex flex-col items-center text-center"
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="flex flex-col items-center text-center flex-1"
               >
-                <div className="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center border-4 border-slate-50 mb-6 shadow-xl relative">
-                  {step.icon}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-secondary text-white font-bold flex items-center justify-center text-sm border-2 border-slate-50">
-                    {index + 1}
+                {/* Icon box with numbered badge */}
+                <div className="relative mb-6">
+                  <span className="absolute -top-2.5 -left-2.5 z-10 w-7 h-7 rounded bg-primary text-white text-xs font-bold flex items-center justify-center shadow">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className="w-20 h-20 rounded-xl bg-slate-100 flex items-center justify-center text-primary shadow-sm">
+                    {step.icon}
                   </div>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 w-full h-full">
-                  <h3 className="text-lg font-bold text-primary mb-2">{step.title}</h3>
-                  <p className="text-sm text-slate-600">{step.description}</p>
-                </div>
+
+                <h3 className="text-[15px] font-bold text-primary mb-2">{step.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed px-2">{step.description}</p>
               </motion.div>
-            ))}
-          </div>
+
+              {/* Dashed arrow connector */}
+              {index < steps.length - 1 && <DashedArrow />}
+            </React.Fragment>
+          ))}
         </div>
 
-        {/* Mobile/Tablet Stepper */}
-        <div className="lg:hidden max-w-lg mx-auto">
+        {/* Mobile — vertical stepper */}
+        <div className="lg:hidden flex flex-col gap-8 max-w-md mx-auto">
           {steps.map((step, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex gap-6 mb-8 relative"
+              className="flex gap-5 items-start"
             >
-              {/* Vertical Line */}
-              {index !== steps.length - 1 && (
-                <div className="absolute left-8 top-20 bottom-[-32px] w-0.5 bg-secondary/30"></div>
-              )}
-              
-              <div className="shrink-0 relative z-10">
-                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center shadow-lg">
-                  {step.icon}
+              {/* Icon + vertical connector */}
+              <div className="flex flex-col items-center shrink-0">
+                <div className="relative">
+                  <span className="absolute -top-2 -left-2 z-10 w-6 h-6 rounded bg-primary text-white text-xs font-bold flex items-center justify-center">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className="w-16 h-16 rounded-xl bg-slate-100 flex items-center justify-center text-primary">
+                    {step.icon}
+                  </div>
                 </div>
-                <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary text-white font-bold flex items-center justify-center text-xs">
-                  {index + 1}
-                </div>
+                {index < steps.length - 1 && (
+                  <div className="mt-2 flex flex-col gap-1">
+                    {[0,1,2].map(i => (
+                      <div key={i} className="w-px h-2 bg-slate-300 mx-auto" />
+                    ))}
+                  </div>
+                )}
               </div>
-              
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex-1">
-                <h3 className="text-lg font-bold text-primary mb-1">{step.title}</h3>
-                <p className="text-sm text-slate-600">{step.description}</p>
+
+              {/* Text */}
+              <div className="pt-2">
+                <h3 className="text-base font-bold text-primary mb-1">{step.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
