@@ -37,7 +37,7 @@ export function RetailerSection() {
               <span className="text-secondary">Trusted by Customers</span>
             </h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              DeakinPay empowers local retailers to offer essential financial services within their communities. Our easy-to-use platform helps people stay financially connected with their families, wherever they are.
+              DekainPay empowers local retailers to offer essential financial services within their communities. Our easy-to-use platform helps people stay financially connected with their families, wherever they are.
             </p>
             <ul className="space-y-4">
               {['Easy API & Portal Integration', 'High Success Rate for Transactions', 'Instant Commission Settlements'].map((item, i) => (

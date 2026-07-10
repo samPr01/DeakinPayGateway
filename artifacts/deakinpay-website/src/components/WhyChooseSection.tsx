@@ -41,7 +41,7 @@ export function WhyChooseSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-primary mb-6"
           >
-            Why Choose <span className="text-secondary">DeakinPay</span>
+            Why Choose <span className="text-secondary">DekainPay</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

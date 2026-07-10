@@ -6,7 +6,7 @@ const steps = [
   {
     icon: <UserPlus size={24} />,
     title: "Register",
-    description: "Sign up as a DeakinPay retailer with basic KYC details."
+    description: "Sign up as a DekainPay retailer with basic KYC details."
   },
   {
     icon: <UserCheck size={24} />,

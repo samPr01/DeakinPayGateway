@@ -29,7 +29,7 @@ export function CTASection() {
           transition={{ delay: 0.1 }}
           className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto"
         >
-          Join DeakinPay and give your customers a simple, secure way to transfer money across India. Grow your retail business.
+          Join DekainPay and give your customers a simple, secure way to transfer money across India. Grow your retail business.
         </motion.p>
         
         <motion.div

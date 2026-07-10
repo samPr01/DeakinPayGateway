@@ -57,7 +57,7 @@ export function DMTSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-slate-600"
           >
-            With DeakinPay, retailers can help customers transfer funds quickly and conveniently to bank accounts across India. Our platform is built for smooth, secure, and dependable NEFT and IMPS transactions.
+            With DekainPay, retailers can help customers transfer funds quickly and conveniently to bank accounts across India. Our platform is built for smooth, secure, and dependable NEFT and IMPS transactions.
           </motion.p>
         </div>
 

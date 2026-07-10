@@ -33,7 +33,7 @@ export function HeroSection() {
             </h1>
             
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-              DeakinPay helps retailers provide reliable domestic money transfer services directly from their outlets. Send money to bank accounts across India through secure NEFT and IMPS transfers.
+              DekainPay helps retailers provide reliable domestic money transfer services directly from their outlets. Send money to bank accounts across India through secure NEFT and IMPS transfers.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
