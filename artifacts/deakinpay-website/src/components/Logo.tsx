@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '@assets/exec-5db9c9d0-066c-4773-847a-d898dcf245bd_1783666683325.png';
 
 interface LogoProps {
   className?: string;
@@ -6,18 +7,28 @@ interface LogoProps {
 }
 
 export function Logo({ className = '', light = false }: LogoProps) {
-  const textColor = light ? 'text-white' : 'text-primary';
-  const shieldColor = light ? '#FFFFFF' : '#0A2240';
-  
+  if (light) {
+    // On dark backgrounds, wrap in a white rounded container so the logo is legible
+    return (
+      <div className={`inline-flex items-center ${className}`}>
+        <div className="bg-white rounded-lg px-3 py-1.5">
+          <img
+            src={logoImg}
+            alt="Dekain Pay"
+            className="h-8 w-auto"
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className={`flex items-center gap-2.5 ${className}`}>
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-        <path d="M16 2L3 8.5V15C3 21.5 8 27.5 16 30C24 27.5 29 21.5 29 15V8.5L16 2Z" fill={shieldColor} />
-        <path d="M11 16L14.5 19.5L21 13" stroke="#16A34A" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      <span className={`font-bold text-2xl tracking-tight leading-none ${textColor}`}>
-        DeakinPay
-      </span>
+    <div className={`inline-flex items-center ${className}`}>
+      <img
+        src={logoImg}
+        alt="Dekain Pay"
+        className="h-9 w-auto"
+      />
     </div>
   );
 }
