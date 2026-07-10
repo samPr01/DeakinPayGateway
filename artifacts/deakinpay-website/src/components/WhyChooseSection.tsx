@@ -34,7 +34,7 @@ export function WhyChooseSection() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export function WhyChooseSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-slate-600 max-w-2xl"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             We provide everything a retailer needs to start a profitable money transfer business with zero hassle.
           </motion.p>
@@ -62,7 +62,7 @@ export function WhyChooseSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className={`bg-white p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 hover:-translate-y-1 hover:shadow-xl transition-all ${index === 3 || index === 4 ? 'lg:col-span-1.5' : ''}`}
+              className={`bg-white p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col items-center text-center ${index === 3 || index === 4 ? 'lg:col-span-1.5' : ''}`}
             >
               <div className="w-12 h-12 rounded-full bg-green-50 text-secondary flex items-center justify-center mb-6">
                 {benefit.icon}

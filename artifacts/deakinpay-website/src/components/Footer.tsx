@@ -58,7 +58,7 @@ export function Footer() {
 
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 text-center md:text-left">
           <p>© 2024 DekainPay. All rights reserved.</p>
           <p>Strictly domestic payment services only. RBI Regulated entity.</p>
         </div>
