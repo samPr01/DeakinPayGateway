@@ -34,7 +34,7 @@ export function HeroSection() {
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">DekainPay helps retailers provide reliable domestic money transfer services directly. Send money to bank accounts across India through secure NEFT and IMPS transfers.</p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-secondary text-white font-semibold rounded-xl hover:bg-secondary/90 transition-all hover:-translate-y-1 shadow-lg shadow-green-600/20">
+              <a href="/partner" className="inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-secondary text-white font-semibold rounded-xl hover:bg-secondary/90 transition-all hover:-translate-y-1 shadow-lg shadow-green-600/20">
                 Become a Partner
                 <ArrowRight size={18} />
               </a>

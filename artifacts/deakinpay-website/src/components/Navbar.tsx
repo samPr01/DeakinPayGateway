@@ -48,7 +48,7 @@ export function Navbar() {
               ))}
             </ul>
             <a 
-              href="#contact"
+              href="/partner"
               className="px-6 py-2.5 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary/90 transition-all hover:-translate-y-0.5"
             >
               Get Started
@@ -85,7 +85,7 @@ export function Navbar() {
             ))}
           </ul>
           <a 
-            href="#contact"
+            href="/partner"
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-center px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary/90"
           >
