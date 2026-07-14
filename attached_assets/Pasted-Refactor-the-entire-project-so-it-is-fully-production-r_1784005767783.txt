@@ -1,0 +1,111 @@
+Refactor the entire project so it is fully production-ready for deployment on Netlify.
+
+The application currently builds successfully, but the deployed site shows:
+
+"Page not found
+Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
+
+Do not apply temporary workarounds. Identify the root cause(s) and make the project Netlify-compatible by default.
+
+## Objectives
+
+### 1. Audit the project
+- Inspect the entire repository structure.
+- Determine whether this is a monorepo or a single application.
+- Identify the actual frontend application that should be deployed.
+- Determine the correct build command and output directory.
+
+### 2. Make the Vite application production-ready
+- Verify `vite.config.ts`.
+- Ensure the `base` configuration is correct for Netlify.
+- Ensure the build outputs to the correct directory.
+- Remove any configuration that depends on local development only.
+- Ensure `vite build` succeeds without requiring development-only environment variables.
+
+### 3. Configure Netlify correctly
+Create or update `netlify.toml` with production-ready settings.
+
+Configure:
+- Build command
+- Publish directory
+- SPA redirects (if applicable)
+- Clean defaults suitable for production
+
+Example requirements:
+
+- Correct publish directory
+- Correct build command
+- SPA redirect:
+  /*    /index.html   200
+
+Only configure redirects if the application is a client-side routed SPA.
+
+### 4. Verify build output
+After building:
+
+- Confirm `index.html` exists.
+- Confirm all JS/CSS assets are generated.
+- Confirm asset paths are valid.
+- Confirm images, fonts, and static assets resolve correctly.
+- Ensure no broken asset references remain.
+
+### 5. Routing
+If the application uses React Router (or another client-side router):
+
+- Configure Netlify SPA routing.
+- Ensure deep links work.
+- Ensure page refreshes work on nested routes.
+- Ensure `/`, `/about`, `/pricing`, `/dashboard`, etc., all resolve correctly.
+
+### 6. Environment variables
+Audit all environment variables.
+
+- Remove any variables incorrectly required during the build.
+- Make development-only variables optional where appropriate.
+- Ensure production builds do not fail because of `PORT` or other local-only variables.
+- Verify environment variables follow Vite conventions (`VITE_*`) where applicable.
+
+### 7. Static assets
+Verify:
+- favicon
+- robots.txt
+- sitemap.xml
+- manifest
+- images
+- fonts
+- public folder contents
+
+Ensure everything is copied into the production build.
+
+### 8. Production optimization
+Ensure:
+- Minified production build
+- No console errors
+- No broken imports
+- No unresolved aliases
+- No missing dependencies
+- No TypeScript build issues
+- No unused Netlify configuration
+
+### 9. Deployment validation
+Run a full production build and verify:
+
+- Build completes successfully.
+- Output directory contains a valid deployable website.
+- `index.html` is present.
+- Asset references are correct.
+- Netlify can serve the application without additional configuration.
+
+### 10. Final report
+Provide:
+
+- Every file modified.
+- The reason each file was changed.
+- Exact diffs.
+- Final `netlify.toml`.
+- Final build command.
+- Final publish directory.
+- Final project structure after the build.
+- Confirmation that the project is fully Netlify-ready and can be deployed without manual configuration.
+
+Do not stop after fixing the first issue. Continue auditing and correcting the project until it is fully compatible with Netlify production deployments and follows Netlify deployment best practices.

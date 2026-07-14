@@ -1,0 +1,17 @@
+# DekainPay — Netlify deployment configuration
+# This is a pnpm monorepo; the frontend lives in artifacts/deakinpay-website.
+
+[build]
+  # Run from the repo root so the workspace resolver can see all packages.
+  command = "corepack enable pnpm && pnpm install --frozen-lockfile && pnpm --filter @workspace/deakinpay-website run build"
+  publish = "artifacts/deakinpay-website/dist/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA routing — all paths resolve to index.html so client-side routing works.
+# Deep links (/partner, etc.) and page refreshes will not return 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
